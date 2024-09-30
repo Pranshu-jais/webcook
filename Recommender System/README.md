@@ -23,7 +23,8 @@ This project implements a movie recommendation system using Python and the Panda
 
    ```bash
    git clone https://github.com/yourusername/Movie-Recommendation-System-Using-Python-and-Pandas.git
-   cd Movie-Recommendation-System-Using-Python-and-Pandas
+   cd Movie-Recommendation-System-Using-Python-and-Pandas   https://github.com/Pranshu-jais/webcook/Recommender System
+.git
 
 
 ### Results
