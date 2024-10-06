@@ -1,0 +1,25 @@
+name: 'Contributors'
+on:
+  push:
+    branches:
+      - main
+jobs:
+  update-contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Generate Contributors List
+        uses: jakejarvis/github-contributors-action@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_NAME: 'Pranshu-jais/webcook'
+          CONTRIBUTOR: '### Contributors'
+          COLUMN_PER_ROW: 6
+          IMG_WIDTH: 100
+          FONT_SIZE: 14
+          PATH: '/README.md'
+          BRANCH: 'main'
+          PULL_REQUEST: ''
+          COMMIT_MESSAGE: 'docs(README): update contributors'
+          AVATAR_SHAPE: 'square'
+          IGNORED_CONTRIBUTORS: ''
