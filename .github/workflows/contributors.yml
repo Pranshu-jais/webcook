@@ -1,25 +1,19 @@
-name: 'Contributors'
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
+
 jobs:
-  update-contributors:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Generate Contributors List
-        uses: jakejarvis/github-contributors-action@v1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_NAME: 'Pranshu-jais/webcook'
-          CONTRIBUTOR: '### Contributors'
-          COLUMN_PER_ROW: 6
-          IMG_WIDTH: 100
-          FONT_SIZE: 14
-          PATH: '/README.md'
-          BRANCH: 'main'
-          PULL_REQUEST: ''
-          COMMIT_MESSAGE: 'docs(README): update contributors'
-          AVATAR_SHAPE: 'square'
-          IGNORED_CONTRIBUTORS: ''
+    contrib-readme-job:
+        runs-on: ubuntu-latest
+        name: A job to automate contrib in readme
+        permissions:
+          contents: write
+          pull-requests: write
+        steps:
+            - name: Contribute List
+              uses: akhilmhdh/contributors-readme-action@v2.3.10
+               with:
+                   image_size: 100
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
