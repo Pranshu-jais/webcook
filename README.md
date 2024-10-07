@@ -19,7 +19,15 @@ created changes    chanfe  last
                     <sub><b>AYUSHJAISWAL12123</b></sub>
                 </a>
             </td>
-           
+            <td align="center">
+                <a href="https://github.com/ajay-dhangar">
+                    <img src="https://avatars.githubusercontent.com/u/99037494?v=4" width="100;" alt="ajay-dhangar"/>
+                    <br />
+                    <sub><b>Ajay Dhangar</b></sub>
+                </a>
+            </td>
+		</tr>
+	<tbody>
 </table>
 <!-- readme: contributors -end -->
 
